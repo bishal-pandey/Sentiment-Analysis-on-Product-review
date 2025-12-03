@@ -27,7 +27,29 @@ This project builds an end-to-end sentiment analysis system that classifies  pro
 - Visualization: Matplotlib for plotting confusion matrices and metric curves.
 - Evaluation: sklearn for accuracy, precision, recall, F1 calculations.
 
-<img width="1068" height="1080" alt="Screenshot (83)" src="https://github.com/user-attachments/assets/5582061f-baeb-434c-aae0-47d47530cf48" />
+  ## _Evaluation_
+
+| Embedding | Hidden Size | Learning Rate | Attention           | Accuracy | Precision | Recall | F1 Score |
+|-----------|------------|---------------|-------------------|---------|-----------|--------|----------|
+| 100       | 64         | 0.0004        | Attention         | **0.98**| **0.98**  | **0.98**| **0.98** ✅| 
+| 100       | 64         | 0.001         | Attention          | 0.95    | 0.95      | 0.95   | 0.95     |                
+| 50        | 64         | 0.0004        | Attention          | 0.91    | 0.91      | 0.91   | 0.91     |                  
+| 100       | 64         | 0.0004        | Attention Disabled | 0.90    | 0.90      | 0.90   | 0.90     |                  
+
+For Logistic Regression and SVM, the text data were transformed into numeric features
+by TF-IDF vectorization
+
+| Model                        | Accuracy | Precision | Recall | F1_score |
+|-------------------------------|---------|-----------|--------|----------|
+| Logistic Regression           | 0.70    | 0.69      | 0.70   | 0.69     |
+| SVM                           | 0.71    | 0.70      | 0.71   | 0.70     |
+| Custom LSTM + Attention       | **0.98**| **0.98**  | **0.98**| **0.98** ✅|
+
+
+<img width="480" height="240" alt="Screenshot (83)" src="https://github.com/bishal-pandey/Sentiment-Analysis-on-Product-review/blob/master/Project_Image/architecture.png?raw=true" />
+                                  #### model architecture
+
+                              
 
   
 
